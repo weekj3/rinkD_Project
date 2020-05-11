@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home"
+    tools:ignore="UnusedNavigation">
+
+    //5가지 item의 frgment를 선언하여 id를 부여한 후 각각의 xml을 layout에 넣어준다.
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.rinkdproject.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_star"
+        android:name="com.example.rinkdproject.ui.star.StarFragment"
+        android:label="@string/title_star"
+        tools:layout="@layout/fragment_star" />
+    <fragment
+        android:id="@+id/navigation_person"
+        android:name="com.example.rinkdproject.ui.person.PersonFragment"
+        android:label="@string/title_person"
+        tools:layout="@layout/fragment_person" />
+    <fragment
+        android:id="@+id/navigation_heart"
+        android:name="com.example.rinkdproject.ui.heart.HeartFragment"
+        android:label="@string/title_heart"
+        tools:layout="@layout/fragment_heart" />
+    <fragment
+        android:id="@+id/navigation_drink"
+        android:name="com.example.rinkdproject.ui.drink.DrinkFragment"
+        android:label="@string/title_drink"
+        tools:layout="@layout/fragment_drink" />
+
+
+</navigation>

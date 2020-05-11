@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttongps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ff0000"
+            android:drawableLeft="@drawable/ic_gps"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="101dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3"
+        tools:ignore="MissingConstraints">
+
+        <Button android:id="@+id/btn_previous"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PREVIOUS"
+            android:textSize="14sp"
+            android:onClick="mOnClick"/>
+
+        <ToggleButton android:id="@+id/toggle_auto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="AUTO"
+            android:textOn="STOP"
+            android:textSize="14sp"/>
+
+        <Button android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="NEXT"
+            android:textSize="14sp"
+            android:onClick="mOnClick"/>
+    </LinearLayout>
+
+    <ViewFlipper
+        android:id="@+id/flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img01"
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:layout_weight="0.56"
+            android:src="@drawable/tea1" />
+
+        <ImageView
+            android:id="@+id/img02"
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:layout_weight="0.56"
+            android:src="@drawable/tea2"/>
+
+        <ImageView
+            android:id="@+id/img03"
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:layout_weight="0.56"
+            android:src="@drawable/tea3"/>
+
+        <ImageView
+            android:id="@+id/img04"
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:layout_weight="0.56"
+            android:src="@drawable/tea4"/>
+
+        <ImageView
+            android:id="@+id/img05"
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:layout_weight="0.56"
+            android:src="@drawable/tea5"/>
+
+        <ImageView
+            android:id="@+id/img06"
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:layout_weight="0.56"
+            android:src="@drawable/tea6"/>
+
+        <ImageView
+            android:id="@+id/img07"
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:layout_weight="0.56"
+            android:src="@drawable/tea7"/>
+
+        <ImageView
+            android:id="@+id/img08"
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:layout_weight="0.56"
+            android:src="@drawable/tea8"/>
+
+        <ImageView
+            android:id="@+id/img09"
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:layout_weight="0.56"
+            android:src="@drawable/tea9"/>
+
+        <ImageView
+            android:id="@+id/img10"
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:layout_weight="0.56"
+            android:src="@drawable/tea10"/>
+
+    </ViewFlipper>
+
+</LinearLayout>

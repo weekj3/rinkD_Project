@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">rinkdproject</string>
+    <string name="title_activity_random">RandomActivity</string>
+    <string name="title_home">홈</string>
+    <string name="title_heart">찜 목록</string>
+    <string name="title_person">RANDOM</string>
+    <string name="title_star">프렌차이즈</string>
+    <string name="title_drink">음료</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps" />
+</resources>
