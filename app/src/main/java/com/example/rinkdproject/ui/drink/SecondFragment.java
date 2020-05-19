@@ -14,11 +14,17 @@ import com.example.rinkdproject.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+//HOT탭의 화면을 보여주기 위한 프래그먼트2
+//Expandablelistview를 추가한 xml 파일을 만들어준다.
 public class SecondFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab_secondfragment, container, false);
 
+        //FirstFragment.java 파일과 마찬가지로 부모와 자식 리스트를 생성한 뒤
+        //각각 필요한 요소들을 추가해주고
+        //Adapter를 생성하여
+        //ExpandableListView에 넣어준다.
         ArrayList<HashMap<String, String>> groupData = new ArrayList<>();
         ArrayList<ArrayList<HashMap<String, String>>> childData = new ArrayList<>();
 

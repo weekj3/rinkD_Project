@@ -18,15 +18,19 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+//ICE탭을 보여주기 위한 프래그먼트1
+//Expandablelistview를 추가한 xml 파일을 만들어준다.
 public class FirstFragment extends Fragment {
     private RecyclerView recyclerview;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab_fistfragment, container, false);
 
+        //부모 리스트와 자식 리스트를 선언해준다.
         ArrayList<HashMap<String,String>> groupData = new ArrayList<>();
         ArrayList<ArrayList<HashMap<String,String>>> childData = new ArrayList<>();
 
+        //부모 리스트에 들어갈 요소들을 추가해준다.
         HashMap<String,String> groupA = new HashMap<>();
         groupA.put("group","커피");
         HashMap<String,String> groupB = new HashMap<>();
@@ -35,6 +39,7 @@ public class FirstFragment extends Fragment {
         groupData.add(groupA);
         groupData.add(groupB);
 
+        //자식 리스트에 들어갈 요소들을 추가해준다.
         ArrayList<HashMap<String,String>>childListA = new ArrayList<>();
 
         HashMap<String,String> childAA = new HashMap<>();
@@ -73,12 +78,14 @@ public class FirstFragment extends Fragment {
 
         childData.add(childListB);
 
+        // 부모, 자식 리스트들 포함한 Adapter 를 생성한다.
         SimpleExpandableListAdapter adapter  = new SimpleExpandableListAdapter(
                 getContext(), groupData,android.R.layout.simple_expandable_list_item_1,
                 new String[] {"group"},new int[] {android.R.id.text1},
                 childData, android.R.layout.simple_expandable_list_item_2,new String[] {"name","group"},new int[]
                 {android.R.id.text1,android.R.id.text2});
 
+        //ExpandableListView에 생성한 Adapter를 설정한다.
         ExpandableListView listView = (ExpandableListView) view.findViewById(R.id.expandableListView);
         listView.setAdapter(adapter);
 

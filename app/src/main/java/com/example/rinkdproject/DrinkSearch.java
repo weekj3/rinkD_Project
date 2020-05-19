@@ -26,7 +26,7 @@ public class DrinkSearch extends AppCompatActivity{
         listView=(ListView)findViewById(R.id.listview1);
         listView.setAdapter(adapter);
 
-
+        //리스트 뷰에 들어갈 아이템 추가
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.juicy1),
                 "딸기 바나나 쥬스", "JUICY") ;
 

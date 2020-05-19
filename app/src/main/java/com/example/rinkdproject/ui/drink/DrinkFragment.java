@@ -24,7 +24,6 @@ import java.util.ArrayList;
 
 public class DrinkFragment extends Fragment {
 
-
     private ViewPager mViewPager;
 
     @Override
@@ -36,22 +35,27 @@ public class DrinkFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_drink, container, false);
 
         mViewPager  =(ViewPager)view.findViewById(R.id.viewPager);
 
+        //tablayout을 설정해준다
+        // ICE와 HOT 두가지 탭을 생성해주었다.
         TabLayout tabLayout = (TabLayout)view.findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("ICE"));
         tabLayout.addTab(tabLayout.newTab().setText("HOT"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
+        //Viewpager객체를 만들어서 xml파일의 viewpager 레이아웃을 가져온다.
+        //Adapter 객체를 만들어서 viewpager 와 연결해준다.
         final ViewPager viewpager =(ViewPager)view.findViewById(R.id.viewPager);
         final PagerAdapter adapter = new PagerAdapter
                 (getChildFragmentManager(),tabLayout.getTabCount());
         viewpager.setAdapter(adapter);
         viewpager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
+
             @Override
             public void onTabSelected(TabLayout.Tab tab){
                 viewpager.setCurrentItem(tab.getPosition());
@@ -74,6 +78,7 @@ public class DrinkFragment extends Fragment {
 
 
 
+    //내부클래스로 Adapter클래스를 생성해준다.
     private class PagerAdapter extends FragmentPagerAdapter{
         int mNumOfTabs;
 
@@ -81,6 +86,7 @@ public class DrinkFragment extends Fragment {
             super(fm);
             this.mNumOfTabs=NumOfTabs;
         }
+        //getItem메서드를 생성하여 해당 프래그먼트를 각각의 tab화면에 표시하도록 해준다.
         @Override
         public Fragment getItem(int position) {
 
