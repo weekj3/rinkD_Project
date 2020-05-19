@@ -27,7 +27,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCqMpxA6k5-aTmPI6DPgQKthm2QE_2j-OE"/>
+            android:value="AIzaSyBgx9MA1kM4_RBRI5i5T5EO3i6IBB05C54"/>
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -39,6 +39,7 @@
         <activity android:name=".MapsActivity"
             android:label="@string/title_activity_maps"/>
        <activity android:name=".RandomActivity"/>
+        <activity android:name=".DrinkSearch"/>
 
     </application>
 

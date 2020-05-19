@@ -17,6 +17,7 @@ import android.widget.ViewFlipper;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.rinkdproject.DrinkSearch;
 import com.example.rinkdproject.MapsActivity;
 import com.example.rinkdproject.R;
 
@@ -37,6 +38,7 @@ public class HomeFragment extends Fragment {
 
         View View= inflater.inflate(R.layout.fragment_home,container,false);
 
+
         Button buttongps = (Button)View.findViewById(R.id.buttongps);
         buttongps.setOnClickListener(
                 new ImageButton.OnClickListener(){
@@ -50,6 +52,21 @@ public class HomeFragment extends Fragment {
                 }
 
         );
+
+        Button buttonsearch=(Button)View.findViewById(R.id.buttonsearch);
+        buttonsearch.setOnClickListener(
+                new ImageButton.OnClickListener(){
+
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent=new Intent(getActivity(), DrinkSearch.class);
+                        startActivity(intent);
+
+                    }
+                }
+
+        );
+
 
         final ViewFlipper flipper = (ViewFlipper)View.findViewById(R.id.flipper);
 

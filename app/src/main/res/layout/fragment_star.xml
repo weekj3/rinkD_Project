@@ -15,13 +15,15 @@
         android:layout_marginTop="0dp"
         android:fillViewport="true"
         android:gravity="center"
-        android:orientation="horizontal">                     <!-- 스크롤뷰 사용 -->
+        android:orientation="horizontal">
 
-        <LinearLayout
+        <GridLayout
             android:id="@+id/layout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:columnCount="3"
+            android:rowCount="3"
+            android:orientation="horizontal">                 <!-- columnCount 최대 열의 개수/ rowCount 최대 행의 개수/ orientation을 사용해 가로를 우선으로 설정 -->
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -133,7 +135,7 @@
                 tools:layout_editor_absoluteX="153dp"
                 tools:layout_editor_absoluteY="516dp" />
 
-        </LinearLayout>
+        </GridLayout>
 
     </ScrollView>
 
